@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
    
@@ -13,18 +14,19 @@
     <div id="vueTarget">
         <div class="sliderContainer">
             <div class="sliderLeft">
-
+                <i  @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
             </div>
             <div class="sliderCenter">
                <div class="imgContainer">
-
+                <img :src="immagini[defaultVueImg].file" alt="">
                </div> 
                <div class="dotsContainer">
-
+                <div v-for="(myPic, myPicIndex) in immagini" :class=" myPicIndex == defaultVueImg ? 'blue' : '' " class="dot" @click="dotClick(myPicIndex)" >
+                </div>
                </div>
             </div>
             <div class="sliderRight">
-
+                <i @click="rightClick" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
         </div>
     </div>
