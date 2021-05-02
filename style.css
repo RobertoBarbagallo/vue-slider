@@ -57,6 +57,7 @@
     background-color: rgba(0, 0, 0, .5);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-radius: 8px;
 }
 
@@ -67,6 +68,11 @@
     border-radius: 50%;
     background-color: white;
 
+}
+
+.autoplay{
+    margin: 0 10px;
+    color: white;
 }
 
 .blue{

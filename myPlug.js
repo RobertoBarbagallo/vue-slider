@@ -36,7 +36,7 @@ const app = new Vue({
             this.counter += 1
 
             if (this.counter % 2 !== 0){
-                this.interval = setInterval(this.rightClick, 1000);
+                this.interval = setInterval(this.rightClick, 2000);
             } else{
                 clearInterval(this.interval)
             }
