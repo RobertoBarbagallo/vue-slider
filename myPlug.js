@@ -13,13 +13,36 @@ const app = new Vue({
 
         ],
 
-        defaultVueImg: 2
+        defaultVueImg: 2,     
+        
+        onKey: addEventListener("keydown", function(checked){
+            if(checked.key == "ArrowLeft"){
+                app.leftClick()
+            } else if(checked.key == "ArrowRight"){
+                app.rightClick()
+            }
+        }),
+
+        counter: 0,
+        interval: null
      
     },
      
 
 
     methods :{
+
+        setTimer: function (){
+            this.counter += 1
+
+            if (this.counter % 2 !== 0){
+                this.interval = setInterval(this.rightClick, 1000);
+            } else{
+                clearInterval(this.interval)
+            }
+        
+        },
+
 
        rightClick: function (){
            this.defaultVueImg += 1
@@ -35,7 +58,8 @@ const app = new Vue({
            
        
 
-       leftClick: function (){
+       leftClick: function (event){
+           
             this.defaultVueImg += -1
             
 
@@ -49,9 +73,16 @@ const app = new Vue({
 
        dotClick: function (myPicIndex){
            this.defaultVueImg = myPicIndex 
+       },
+
+       count: function (){
+           this.counter = 5
        }
+       
+
     
     }
 
+    
 
 })

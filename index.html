@@ -11,7 +11,7 @@
     <title>Vue Slider</title>
 </head>
 <body>
-    <div @keyup.left="leftClick" @keyup.right="rightClick" id="vueTarget">
+    <div id="vueTarget">
         <div class="sliderContainer">
             <div class="sliderLeft">
                 <i @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -28,8 +28,11 @@
             <div class="sliderRight">
                 <i  @click="rightClick" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
-        </div>
+
+            <input @click="setTimer" type="button" value="autoplay">
+        </div> 
     </div>
+
     <script src="myPlug.js"></script>
 </body>
 </html>
