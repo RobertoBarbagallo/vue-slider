@@ -11,10 +11,10 @@
     <title>Vue Slider</title>
 </head>
 <body>
-    <div id="vueTarget">
+    <div @keyup.left="leftClick" @keyup.right="rightClick" id="vueTarget">
         <div class="sliderContainer">
             <div class="sliderLeft">
-                <i  @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
+                <i @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
             </div>
             <div class="sliderCenter">
                <div class="imgContainer">
@@ -26,7 +26,7 @@
                </div>
             </div>
             <div class="sliderRight">
-                <i @click="rightClick" class="fa fa-chevron-right" aria-hidden="true"></i>
+                <i  @click="rightClick" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
         </div>
     </div>

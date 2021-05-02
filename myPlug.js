@@ -14,7 +14,11 @@ const app = new Vue({
         ],
 
         defaultVueImg: 2
+     
     },
+     
+
+
     methods :{
 
        rightClick: function (){
