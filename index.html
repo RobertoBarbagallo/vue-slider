@@ -21,15 +21,18 @@
                 <img :src="immagini[defaultVueImg].file" alt="">
                </div> 
                <div class="dotsContainer">
-                <div v-for="(myPic, myPicIndex) in immagini" :class=" myPicIndex == defaultVueImg ? 'blue' : '' " class="dot" @click="dotClick(myPicIndex)" >
-                </div>
+                    <div v-for="(myPic, myPicIndex) in immagini" :class=" myPicIndex == defaultVueImg ? 'blue' : '' " class="dot" @click="dotClick(myPicIndex)">  
+                    </div>
+                    <div class="autoplay">
+                        <i @click ="setTimer" class="fa fa-play-circle" aria-hidden="true"></i> 
+                     </div> 
                </div>
             </div>
             <div class="sliderRight">
                 <i  @click="rightClick" class="fa fa-chevron-right" aria-hidden="true"></i>
             </div>
 
-            <input @click="setTimer" type="button" value="autoplay">
+            <!-- <input @click="setTimer" type="button" value="autoplay"> -->
         </div> 
     </div>
 

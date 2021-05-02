@@ -15,7 +15,7 @@ const app = new Vue({
 
         defaultVueImg: 2,     
         
-        onKey: addEventListener("keydown", function(checked){
+        onKey: addEventListener("keyup", function(checked){
             if(checked.key == "ArrowLeft"){
                 app.leftClick()
             } else if(checked.key == "ArrowRight"){
