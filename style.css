@@ -14,7 +14,8 @@
     position: relative;
 }
 
-.sliderContainer:focus{
+.sliderContainer:focus,
+.sliderContainer:active{
     outline: none;
 }
 
