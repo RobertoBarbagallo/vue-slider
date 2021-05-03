@@ -21,7 +21,7 @@
                 <img :src="immagini[defaultVueImg].file" alt="">
                </div> 
                <div class="dotsContainer">
-                    <div v-for="(myPic, myPicIndex) in immagini" :class=" myPicIndex == defaultVueImg ? 'blue' : '' " class="dot" @click="dotClick(myPicIndex)">  
+                    <div v-for="(myPic, myPicIndex) in immagini" :class="{blue: myPicIndex == defaultVueImg}" class="dot" @click="dotClick(myPicIndex)">  
                     </div>
                     <div class="autoplay">
                         <i @click ="setTimer" class="fa fa-play-circle" aria-hidden="true"></i> 
