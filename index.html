@@ -12,9 +12,9 @@
 </head>
 <body>
     <div id="vueTarget">
-        <div class="sliderContainer">
+        <div tabindex="-1" @keyup.left="leftClick" @keyup.right= "rightClick" class="sliderContainer">
             <div class="sliderLeft">
-                <i @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
+                <i  @click="leftClick" class="fa fa-chevron-left" aria-hidden="true"></i>
             </div>
             <div class="sliderCenter">
                <div class="imgContainer">

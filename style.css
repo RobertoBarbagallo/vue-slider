@@ -12,7 +12,10 @@
     margin: auto;
     margin-top: 80px;
     position: relative;
- 
+}
+
+.sliderContainer:focus{
+    outline: none;
 }
 
 .sliderLeft, .sliderRight{

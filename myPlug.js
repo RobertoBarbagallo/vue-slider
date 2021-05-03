@@ -15,13 +15,13 @@ const app = new Vue({
 
         defaultVueImg: 2,     
         
-        onKey: addEventListener("keyup", function(checked){
-            if(checked.key == "ArrowLeft"){
-                app.leftClick()
-            } else if(checked.key == "ArrowRight"){
-                app.rightClick()
-            }
-        }),
+        // onKey: addEventListener("keyup", function(checked){
+        //     if(checked.key == "ArrowLeft"){
+        //         app.leftClick()
+        //     } else if(checked.key == "ArrowRight"){
+        //         app.rightClick()
+        //     }
+        // }),
 
         counter: 0,
         interval: null
@@ -45,14 +45,18 @@ const app = new Vue({
 
 
        rightClick: function (){
-           this.defaultVueImg += 1
+
+           let newIndex = this.defaultVueImg + 1
+       
 
            let limite = (this.immagini.length -1)
 
-           if(this.defaultVueImg > limite){
-            this.defaultVueImg = 0
+           if(newIndex > limite){
+            newIndex = 0
  
            }
+
+           this.defaultVueImg = newIndex
            
         },
            
@@ -60,14 +64,16 @@ const app = new Vue({
 
        leftClick: function (event){
            
-            this.defaultVueImg += -1
+            let newIndex = this.defaultVueImg - 1
             
 
             let limite = 0
 
-            if(this.defaultVueImg < limite ){
-               this.defaultVueImg = (this.immagini.length - 1)
+            if(newIndex < limite ){
+               newIndex = (this.immagini.length - 1)
             }
+
+            this.defaultVueImg = newIndex
             
        },
 
@@ -81,6 +87,10 @@ const app = new Vue({
        
 
     
+    },
+
+    mounted (){
+        document.querySelector(".sliderContainer").focus()
     }
 
     
